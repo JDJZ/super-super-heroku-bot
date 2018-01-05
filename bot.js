@@ -5,7 +5,7 @@ const client = new Discord.Client();
 
 var prefix = #;
 
-var servers = {};
+//var servers = {};
 
 /*
 const yt_api_key = config.yt_api_key
@@ -88,7 +88,7 @@ function play(connection, message){
 client.on('guildCreate', (guild) =>  {
   guild.channels.find("name", "general").send(`Thanks for adding me to your server! To get started please use #help. I am still in beta. Once I am out of beta, I will become online 24/7! If you need help, please message my owner <@173656340223229952>.
 -Wolf :smiley:`)
-  //client.user.setPresence({ game: { name: config.prefix + "help | " + client.users.size + " users", type: 0 } });
+  //client.user.setPresence({ game: { name: prefix + "help | " + client.users.size + " users", type: 0 } });
 });
 
 client.on('guildMemberAdd', member => {
@@ -103,14 +103,14 @@ client.on('guildMemberRemove', member => {
   if (!channel) return;
   channel.send(`${member} left the server. :sob:`);
   //client.user.setPresence({ game: { name: config.prefix + "help | " + client.users.size + " users", type: 0 } });
-});
+}); */
 
 
 client.on('message', message => {
   if(message.author.bot) return;
   if(!message.content.startsWith(prefix)) return;
 
-  var args = message.content.substring(config.prefix.length).split(" ");
+  var args = message.content.substring(prefix.length).split(" ");
 
   switch (args[0].toLowerCase()) {
   case "play":
