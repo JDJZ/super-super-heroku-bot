@@ -3,7 +3,7 @@ const client = new Discord.Client();
 //const YTDL = require('ytdl-core');
 
 
-var prefix = config.prefix;
+var prefix = #;
 
 var servers = {};
 
