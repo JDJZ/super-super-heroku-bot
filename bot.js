@@ -103,7 +103,7 @@ client.on('guildMemberRemove', member => {
   if (!channel) return;
   channel.send(`${member} left the server. :sob:`);
   //client.user.setPresence({ game: { name: config.prefix + "help | " + client.users.size + " users", type: 0 } });
-}); */
+}); 
 
 
 client.on('message', message => {
