@@ -28,42 +28,42 @@ const embed = {
   },
   "fields": [
     {
-      "name": config.prefix + "help",
+      "name": prefix + "help",
       "value": "This will list all the commands!   ‍      ‍      ‍      ‍      ‍      ‍   ",
       "inline": true
     },
     {
-      "name": config.prefix + "ping",
+      "name": prefix + "ping",
       "value": "This will ping the bot.",
       "inline": true
     },
     {
-      "name": config.prefix + "play",
+      "name": prefix + "play",
       "value": "This will make the bot say something.",
       "inline": true
     },
     {
-      "name": config.prefix + "clear",
+      "name": prefix + "clear",
       "value": "This will clear the queue. *Coming soon!*",
       "inline": true
     },
     {
-      "name": config.prefix + "skip",
+      "name": prefix + "skip",
       "value": "This will force skip the current song playing. *Coming soon!*",
       "inline": true
     },
     {
-      "name": config.prefix + "np",
+      "name": prefix + "np",
       "value": "This will show the current song playing. *Coming soon!*",
       "inline": true
     },
     {
-      "name": config.prefix + "disconnect",
+      "name": prefix + "disconnect",
       "value": "Force the music bot to leave the voice channel.",
       "inline": true
     },
     {
-      "name": config.prefix + "invite",
+      "name": prefix + "invite",
       "value": "Gives an invite like for you to add me!",
       "inline": true
     },
@@ -108,7 +108,7 @@ client.on('guildMemberRemove', member => {
 
 client.on('message', message => {
   if(message.author.bot) return;
-  if(!message.content.startsWith(config.prefix)) return;
+  if(!message.content.startsWith(prefix)) return;
 
   var args = message.content.substring(config.prefix.length).split(" ");
 
