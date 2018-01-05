@@ -1,14 +1,13 @@
 const Discord = require('discord.js');
 const client = new Discord.Client();
-const config = require("./config.json");
-const YTDL = require('ytdl-core');
+//const YTDL = require('ytdl-core');
 
 
 var prefix = config.prefix;
 
 var servers = {};
 
-
+/*
 const yt_api_key = config.yt_api_key
 
 client.on('ready', () => {
@@ -16,7 +15,7 @@ client.on('ready', () => {
   console.log('');
   client.user.setGame('LOL');
   //client.user.setGame(config.prefix + "help | " + client.users.size + " users");
-});
+});*/
 
 //Help embed
 const embed = {
@@ -71,7 +70,7 @@ const embed = {
   ]
 };
 
-
+/*
 function play(connection, message){
   var server = servers[message.guild.id];
 
@@ -84,7 +83,7 @@ function play(connection, message){
     else connection.disconnect();
   });
 
-}
+}*/
 
 client.on('guildCreate', (guild) =>  {
   guild.channels.find("name", "general").send(`Thanks for adding me to your server! To get started please use #help. I am still in beta. Once I am out of beta, I will become online 24/7! If you need help, please message my owner <@173656340223229952>.
