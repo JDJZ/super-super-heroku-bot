@@ -16,5 +16,19 @@ client.on('message', message => {
   	}
 });
 
+client.on('guildMemberAdd', member => {
+  const channel = member.guild.channels.find('name', 'logs');
+  if (!channel) return;
+  channel.send(`Welcome to the server, ${member}`);
+  client.user.setPresence({ game: { name: config.prefix + "help | " + client.users.size + " users", type: 0 } });
+});
+
+client.on('guildMemberRemove', member => {
+  const channel = member.guild.channels.find('name', 'logs');
+  if (!channel) return;
+  channel.send(`${member} left the server. :sob:`);
+  client.user.setPresence({ game: { name: config.prefix + "help | " + client.users.size + " users", type: 0 } });
+});
+
 // THIS  MUST  BE  THIS  WAY
 client.login(process.env.BOT_TOKEN);
