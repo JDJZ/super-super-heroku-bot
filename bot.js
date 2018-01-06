@@ -4,6 +4,8 @@ const config = require("./config.json");
 
 var prefix = config.prefix;
 
+var servers = {};
+
 client.on('ready', () => {
     console.log('I am ready!');
 });
